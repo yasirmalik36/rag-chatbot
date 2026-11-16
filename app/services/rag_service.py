@@ -5,7 +5,6 @@ RAG Service — Orchestrates retrieval + generation pipeline.
 import time
 import uuid
 import logging
-from typing import List, Optional
 
 from app.services.vector_store import VectorStoreService
 from app.services.llm_service import LLMService

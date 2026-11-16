@@ -2,7 +2,7 @@
 
 > **Retrieval-Augmented Generation** chatbot built with **FastAPI**, **LangChain**, **FAISS**, and **GPT-4o**. Upload your documents, ask questions, get grounded answers with source citations.
 >
-> *Reduced support ticket volume by 35% and improved CSAT scores by 30% in production deployment.*
+> *A reference implementation of the pattern behind a production RAG chatbot I built at Markitech.AI, which cut support tickets by 35% and raised CSAT by 30%. This repository is an independent rebuild — no client code or data.*
 
 [![Python](https://img.shields.io/badge/Python_3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
@@ -10,7 +10,7 @@
 [![OpenAI](https://img.shields.io/badge/GPT--4o-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
 [![FAISS](https://img.shields.io/badge/FAISS-00599C?style=for-the-badge)](https://faiss.ai)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://docker.com)
-[![Tests](https://img.shields.io/badge/Tests-Pytest-green?style=for-the-badge)](tests/)
+[![CI](https://github.com/yasirmalik36/rag-chatbot/actions/workflows/ci.yml/badge.svg)](https://github.com/yasirmalik36/rag-chatbot/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 ---
@@ -25,7 +25,7 @@
 | 💬 **Multi-turn Conversations** | Session-based conversation history (last 6 turns) |
 | 📚 **Source Citations** | Every answer includes scored source chunks |
 | 🗑️ **Document Management** | Upload, list, delete documents via REST API |
-| ⚡ **Sub-second Retrieval** | FAISS in-memory search — p99 < 50ms for 100K chunks |
+| ⚡ **Fast Retrieval** | In-memory FAISS search over normalised embeddings |
 | 🐳 **Docker Ready** | Single command deployment with docker-compose |
 | 🧪 **Tested** | Unit tests for RAG pipeline, vector store, API routes |
 | 📊 **Observable** | Latency, token usage, session ID in every response |

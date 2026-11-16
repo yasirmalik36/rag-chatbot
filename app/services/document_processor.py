@@ -4,7 +4,6 @@ Document Processor — handles PDF, TXT, DOCX, MD ingestion.
 
 import logging
 from pathlib import Path
-from typing import Optional
 import io
 
 logger = logging.getLogger(__name__)

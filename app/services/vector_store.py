@@ -3,14 +3,13 @@ FAISS Vector Store Service
 Handles document embedding, indexing, retrieval, and persistence.
 """
 
-import os
 import json
 import uuid
 import logging
 import numpy as np
 from pathlib import Path
 from datetime import datetime
-from typing import List, Tuple, Optional, Dict, Any
+from typing import List, Optional, Dict, Any
 
 import faiss
 from langchain_openai import OpenAIEmbeddings

@@ -106,7 +106,7 @@ class TestSchemas:
         req = ChatRequest(message="Hello", session_id="abc-123")
         assert req.message == "Hello"
         assert req.session_id == "abc-123"
-        assert req.stream is False
+        assert req.top_k == 5
 
     def test_chat_request_rejects_empty_message(self):
         from app.models.schemas import ChatRequest

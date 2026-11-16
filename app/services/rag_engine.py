@@ -20,7 +20,6 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.schema.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 

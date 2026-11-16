@@ -2,9 +2,15 @@ name: CI
 
 on:
   push:
-    branches: [main, develop]
   pull_request:
     branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -21,12 +27,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Lint
+        run: |
+          pip install ruff==0.7.4
+          ruff check app/
+
       - name: Run tests
         env:
           OPENAI_API_KEY: "sk-test-placeholder"
         run: pytest tests/ -v --tb=short
-
-      - name: Lint
-        run: |
-          pip install ruff
-          ruff check app/

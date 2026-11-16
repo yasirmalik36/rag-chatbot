@@ -29,6 +29,7 @@ class Settings(BaseSettings):
     CHUNK_SIZE: int = 512
     CHUNK_OVERLAP: int = 64
     MAX_CONTEXT_LENGTH: int = 4000
+    MAX_HISTORY_TURNS: int = 6  # conversation turns kept per session
 
     # Redis (optional caching)
     REDIS_URL: str = "redis://localhost:6379"
