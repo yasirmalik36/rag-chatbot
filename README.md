@@ -15,6 +15,12 @@
 
 ---
 
+## 📸 Screenshot
+
+The interactive API docs (`/docs`), served by the running app:
+
+![RAG Chatbot API docs](docs/screenshots/api-docs.png)
+
 ## ✨ Features
 
 | Feature | Details |

@@ -30,19 +30,13 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="RAG Chatbot API",
-    description="""
-    ## Production-grade Retrieval-Augmented Generation API
-    
-    Built by **Yasir Mehmood** — Senior Full-Stack & AI Engineer
-    
-    ### Features
-    - 📄 **Document ingestion** — PDF, TXT, DOCX support
-    - 🔍 **Hybrid search** — Dense (FAISS) + Sparse (BM25) retrieval
-    - 🤖 **LLM generation** — GPT-4o with streaming support
-    - 📊 **Evaluation** — RAGAS metrics built-in
-    - 🔁 **Multi-turn** — Conversation history with memory
-    - ⚡ **Fast** — Sub-2s response for most queries
-    """,
+    description=(
+        "Retrieval-Augmented Generation API by **Yasir Mehmood**.\n\n"
+        "- **Document ingestion**: PDF, TXT and DOCX, chunked and embedded\n"
+        "- **Semantic search**: FAISS cosine-similarity retrieval with a score threshold\n"
+        "- **Grounded answers**: GPT-4o answers with source citations\n"
+        "- **Multi-turn**: per-session conversation history"
+    ),
     version="1.0.0",
     lifespan=lifespan,
     docs_url="/docs",

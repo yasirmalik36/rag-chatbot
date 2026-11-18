@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "RAG Chatbot API"
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = False
+    ENVIRONMENT: str = "production"  # "development" enables auto-reload
 
     # OpenAI
     OPENAI_API_KEY: str = "sk-placeholder"
